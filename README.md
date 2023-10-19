@@ -8,6 +8,6 @@ Apply docker-compose
 
 docker-compose up -d
 
-Create Cluster Using cluster-commands.txt file
+Create Cluster Using cluster-command.txt file
 
 ```
