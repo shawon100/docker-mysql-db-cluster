@@ -1,0 +1,18 @@
+mysqlsh -uclusteradmin -p'cladmin'
+dba.checkInstanceConfiguration("clusteradmin@{container name}:port")
+dba.configureInstance("clusteradmin@{container name}:port")
+var cluster = dba.createCluster("{cluster name}")
+cluster.status()
+cluster.addInstance("clusteradmin@{container name}:{port}")
+
+CREATE DATABASE developer;
+CREATE TABLE dev(name VARCHAR(20) NOT NULL, SLNO INT NOT NULL, 
+PRIMARY KEY(SLNO));
+
+DESCRIBE dev;
+
+INSERT INTO dev VALUE("dev1",1);
+
+SELECT * from developer.dev
+
+
