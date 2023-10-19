@@ -6,6 +6,9 @@ cluster.status()
 cluster.addInstance("clusteradmin@{container name}:{port}")
 
 CREATE DATABASE developer;
+
+use developer;
+
 CREATE TABLE dev(name VARCHAR(20) NOT NULL, SLNO INT NOT NULL, 
 PRIMARY KEY(SLNO));
 
@@ -13,6 +16,6 @@ DESCRIBE dev;
 
 INSERT INTO dev VALUE("dev1",1);
 
-SELECT * from developer.dev
+SELECT * from developer.dev;
 
 
